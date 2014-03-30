@@ -2,14 +2,32 @@
 	<head>
 	   <title>Number2Provider</title>
 	   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+	   <link rel="stylesheet" type="text/css" href="css/app.css">
 	</head>
 	<body background="http://e-demos.net/number2provider/background.jpg">
-		<form action="http://number2provider.e-demos.net" method="GET">
-		<center><FONT COLOR="white"> 	<h1><label for="number">Βάλε τον αριθμό του κινητού για να δείς τον πάροχο </label><BR />
-<br>
-			<input id="number" type="number" name="number" /><BR />
-<br>
-			<input type="submit" value="Βρες τον" /> </center>
+		<form action="http://number2provider.e-demos.net" method="GET" id="find-number-form">
+			<center>
+				<font color="white">
+					<h1>
+						<label for="number">Βάλε τον αριθμό του κινητού για να δείς τον πάροχο</label>
+					</h1>
+					<BR />
+					<BR />
+					<input id="number" type="number" name="number" required="required" />
+					<BR />
+					<BR />
+					<input type="submit" value="Βρες τον" />
+				</font>
+			</center>
 		</form>
+		<div class="loading" style="display: none;">
+		   <table id="wrapper">
+			  <tr>
+				 <td><img src="img/app/spinner.gif" class="spinner" alt="Loading..." /></td>
+			  </tr>
+		   </table>
+		</div>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
